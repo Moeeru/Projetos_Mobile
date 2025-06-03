@@ -11,50 +11,50 @@
 
     <RadioGroup
         android:id="@+id/Grupo_Pergunta1"
-        android:layout_width="253dp"
-        android:layout_height="207dp"
+        android:layout_width="286dp"
+        android:layout_height="110dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_editor_absoluteY="100dp"
+        tools:layout_editor_absoluteY="100dp">
 
         <TextView
             android:id="@+id/pergunta1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Qual a capital do Brasil" />
+            android:text="O método onCreate é obrigatório em uma activity?" />
 
         <RadioButton
-            android:id="@+id/opcaoWashington"
+            android:id="@+id/opcaoDiaS"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Washintong" />
+            android:text="Verdadeiro" />
 
         <RadioButton
-            android:id="@+id/opcaoParis"
+            android:id="@+id/opcaoDiaN"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Paris" />
+            android:text="Falso" />
 
-        <RadioButton
-            android:id="@+id/opcaoSaoPaulo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="São Paulo" />
-
-        <RadioButton
-            android:id="@+id/opcaoBrasilia"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:minHeight="48dp"
-            android:text="Brasília" />
     </RadioGroup>
+
+    <Button
+        android:id="@+id/botaoEnviar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="56dp"
+        android:text="Enviar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <RadioGroup
         android:id="@+id/Grupo_Pergunta2"
-        android:layout_width="289dp"
-        android:layout_height="237dp"
-        app:layout_constraintBottom_toTopOf="@+id/botaoEnviar"
+        android:layout_width="290dp"
+        android:layout_height="152dp"
+        app:layout_constraintBottom_toTopOf="@+id/Grupo_Pergunta3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Grupo_Pergunta1"
@@ -64,45 +64,58 @@
             android:id="@+id/pergunta2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Qual o maior entre os 4 primeiros planetas do sistema solar?" />
+            android:text="Java e Kotlin são as linguagens nativas para o desenvolvimento de aplicativos Android?" />
 
         <RadioButton
-            android:id="@+id/opcaoSol"
+            android:id="@+id/opcaoHomemS"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Sol" />
+            android:text="Verdadeiro" />
 
         <RadioButton
-            android:id="@+id/opcaoJupiter"
+            android:id="@+id/opcaoHomemN"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Jupiter" />
+            android:text="Falso" />
 
-        <RadioButton
-            android:id="@+id/opcaoMarte"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Marte" />
-
-        <RadioButton
-            android:id="@+id/opcaoTerra"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:minHeight="48dp"
-            android:text="Terra"
-            tools:layout_editor_absoluteX="64dp"
-            tools:layout_editor_absoluteY="144dp" />
     </RadioGroup>
 
-    <Button
-        android:id="@+id/botaoEnviar"
+    <RadioGroup
+        android:id="@+id/Grupo_Pergunta3"
+        android:layout_width="296dp"
+        android:layout_height="153dp"
+        app:layout_constraintBottom_toTopOf="@+id/botaoEnviar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_editor_absoluteY="309dp">
+
+        <TextView
+            android:id="@+id/pergunta3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Um aplicativo Android pode ter apenas uma Activity?" />
+
+        <RadioButton
+            android:id="@+id/opcaoSolS"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Verdadeiro" />
+
+        <RadioButton
+            android:id="@+id/opcaoSolN"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Falso" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="68dp"
-        android:text="Enviar"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Prova 1 - Programação para Dispositivos Móveis"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.544"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="35dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -11,9 +11,9 @@ import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity0 extends AppCompatActivity {
-    // Variáveis para os grupos de radio buttons
     private RadioGroup grupoPergunta1;
     private RadioGroup grupoPergunta2;
+    private RadioGroup grupoPergunta3;
     private Button botaoEnviar;
 
     @Override
@@ -26,9 +26,9 @@ public class MainActivity0 extends AppCompatActivity {
     }
 
     private void inicializaTela(){
-        // Obtenha os RadioGroup conforme definidos no XML
         grupoPergunta1 = findViewById(R.id.Grupo_Pergunta1);
         grupoPergunta2 = findViewById(R.id.Grupo_Pergunta2);
+        grupoPergunta3 = findViewById(R.id.Grupo_Pergunta3);
         botaoEnviar = findViewById(R.id.botaoEnviar);
 
         botaoEnviar.setOnClickListener(new View.OnClickListener() {
@@ -48,11 +48,12 @@ public class MainActivity0 extends AppCompatActivity {
     private void enviarResposta() {
         String resposta1 = verificaRespostas(grupoPergunta1);
         String resposta2 = verificaRespostas(grupoPergunta2);
+        String resposta3 = verificaRespostas(grupoPergunta3);
 
         Intent telaResultado = new Intent(this, TelaResultado.class);
         telaResultado.putExtra("resposta1", resposta1);
         telaResultado.putExtra("resposta2", resposta2);
-
+        telaResultado.putExtra("resposta3", resposta3);
         startActivity(telaResultado);
     }
 }
